@@ -1,1 +1,6 @@
-<Solution />
+<Solution>
+  <Project Path="../DTCMKEMG.Entities/DTCMKEMG.Entities.csproj" Id="e185fc1b-f0d6-4587-9ee3-95ea04ae9cf3" />
+  <Project Path="DTCMKEMG.BusinessLogic/DTCMKEMG.BusinessLogic.csproj" Id="b73ef76c-428d-4e15-91c6-71e8dfce8ca0" />
+  <Project Path="DTCMKEMG.DataAccess/DTCMKEMG.DataAccess.csproj" Id="262684df-1571-4ea9-a080-e53f421e2e83" />
+  <Project Path="DTCMKEMG.WebApplication/DTCMKEMG.WebApplication.csproj" Id="736b796a-d416-4d42-a645-6bbc9efe0139" />
+</Solution>
