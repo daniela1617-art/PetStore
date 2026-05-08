@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace DTCMKEMG.DataAccess.Models;
+namespace DTCMKEMG.Entities;
 
 public partial class PetSupply
 {

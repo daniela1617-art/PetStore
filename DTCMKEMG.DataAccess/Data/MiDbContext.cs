@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using DTCMKEMG.DataAccess.Models;
+using DTCMKEMG.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace DTCMKEMG.DataAccess.Data;
