@@ -1,5 +1,6 @@
 ﻿using Ardalis.Specification.EntityFrameworkCore;
 using DTCMKEMG.DataAccess.Data;
+using DTCMKEMG.DataAccess.interfaces;
 using Microsoft.EntityFrameworkCore.Storage;
 
 namespace DTCMKEMG.DataAccess.Repositories

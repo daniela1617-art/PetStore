@@ -6,6 +6,6 @@ using System.Text;
 
 namespace DTCMKEMG.BusinessLogic.UseCase.PetBrand.Queries.GetPetBrands
 {
-    public record GetBrandsQuery() : IRequest<List<PetBrandResponse>>;
+    public record GetPetBrandsQuery() : IRequest<List<PetBrandResponse>>;
 }
 
