@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Include="..\DTCMKEMG.WebApplication\Views\PetBrands\Index.cshtml" Link="Index.cshtml" />
+  </ItemGroup>
+
 </Project>

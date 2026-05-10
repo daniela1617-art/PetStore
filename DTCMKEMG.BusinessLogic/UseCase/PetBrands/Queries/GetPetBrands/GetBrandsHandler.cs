@@ -1,15 +1,18 @@
-﻿using MediatR;
-using DTCMKEMG.BusinessLogic.DTOs;
+﻿using DTCMKEMG.BusinessLogic.DTOs;
+using DTCMKEMG.BusinessLogic.UseCase.PetBrand.Queries.GetPetBrands;
+using DTCMKEMG.DataAccess.interfaces;
 using Mapster;
-using DTCMKEMG.BusinessLogic.UseCase.PetBrand.Queries.GetPetBrands; 
-using DTCMKEMG.DataAccess.interfaces; 
+using MediatR;
 
 namespace DTCMKEMG.BusinessLogic.UseCase.PetBrands.Queries.GetPetBrands;
 
-internal sealed class GetPetBrandsHandler(IEfRepository<DTCMKEMG.Entities.PetBrand> _repository)
-  : IRequestHandler<GetBrandsQuery, List<PetBrandResponse>>
+internal sealed class GetPetBrandsHandler(
+    IEfRepository<DTCMKEMG.Entities.PetBrand> _repository)
+    : IRequestHandler<GetPetBrandsQuery, List<PetBrandResponse>>
 {
-    public async Task<List<PetBrandResponse>> Handle(GetBrandsQuery query, CancellationToken cancellationToken)
+    public async Task<List<PetBrandResponse>> Handle(
+        GetPetBrandsQuery query,
+        CancellationToken cancellationToken)
     {
         var brands = await _repository.ListAsync(cancellationToken);
 

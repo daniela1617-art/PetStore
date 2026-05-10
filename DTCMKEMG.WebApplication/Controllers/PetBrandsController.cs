@@ -1,4 +1,5 @@
-﻿using MediatR;
+﻿using DTCMKEMG.BusinessLogic.UseCase.PetBrand.Queries.GetPetBrands;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DTCMKEMG.WebApplication.Controllers
@@ -9,10 +10,12 @@ namespace DTCMKEMG.WebApplication.Controllers
         public PetBrandsController(IMediator media)
         {
             _mediator = media;
-        }
-        public IActionResult Index()
+        } 
+        public async Task<IActionResult> Index()
         {
-            return View();
+            var brands = await _mediator.Send(new GetPetBrandsQuery());
+            return View(brands);
         }
     }
 }
+ 

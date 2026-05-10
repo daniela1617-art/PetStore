@@ -1,9 +1,9 @@
 ﻿using DTCMKEMG.DataAccess.Data;
+using DTCMKEMG.DataAccess.interfaces;
 using DTCMKEMG.DataAccess.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-
 
 namespace DTCMKEMG.DataAccess
 {
@@ -18,6 +18,7 @@ namespace DTCMKEMG.DataAccess
                 options.UseSqlServer(configuration.GetConnectionString("DbConnection") ??
                     throw new InvalidOperationException("connection string 'DbContext not found '"))
             );
+
             services.AddTransient(typeof(IEfRepository<>), typeof(EfRepository<>));
 
             return services;
