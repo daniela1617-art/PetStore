@@ -6,13 +6,10 @@ using MediatR;
 
 namespace DTCMKEMG.BusinessLogic.UseCase.PetBrands.Queries.GetPetBrands;
 
-internal sealed class GetPetBrandsHandler(
-    IEfRepository<DTCMKEMG.Entities.PetBrand> _repository)
+internal sealed class GetPetBrandsHandler(IEfRepository<DTCMKEMG.Entities.PetBrand> _repository)
     : IRequestHandler<GetPetBrandsQuery, List<PetBrandResponse>>
 {
-    public async Task<List<PetBrandResponse>> Handle(
-        GetPetBrandsQuery query,
-        CancellationToken cancellationToken)
+    public async Task<List<PetBrandResponse>> Handle(GetPetBrandsQuery query,CancellationToken cancellationToken)
     {
         var brands = await _repository.ListAsync(cancellationToken);
 
