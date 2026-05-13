@@ -1,0 +1,30 @@
+﻿@model DTCMKEMG.BusinessLogic.DTOs.PetBrandResponse
+
+@{
+    ViewData["Title"] = "Eliminar";
+}
+
+<h1>Eliminar</h1>
+
+<h4>¿Desea eliminar esta raza?</h4>
+<hr />
+
+<div class="row">
+    <div class="col-md-4">
+
+        <div class="form-group">
+            <label class="control-label">Nombre de raza</label>
+            <input asp-for="Name" class="form-control" readonly />
+        </div>
+
+        <form asp-action="Delete">
+            <input type="hidden" asp-for="Id" />
+
+            <div class="form-group mt-3">
+                <input type="submit" value="Eliminar" class="btn btn-danger" />
+                <a asp-action="Index" class="btn btn-info">Cancelar</a>
+            </div>
+        </form>
+
+    </div>
+</div>
