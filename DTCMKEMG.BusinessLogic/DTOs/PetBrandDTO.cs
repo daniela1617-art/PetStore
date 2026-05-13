@@ -14,5 +14,11 @@ namespace DTCMKEMG.BusinessLogic.DTOs
     {
         public string Name { get; set; } = null!;
     }
+    public class UpdatePetBrandRequest
+    {
+        public int Id { get; set; }
 
+        public string Name { get; set; } = null!;
+    }
+    
 }
