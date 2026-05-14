@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using MediatR;
 
 namespace DTCMKEMG.BusinessLogic.UseCase.PetSupply.Commands.DeletePetSupply
 {
-    internal class DeletePetSupplyCommand
-    {
-    }
+    public record DeletePetSupplyCommand(long petSupplyId)
+        : IRequest<int>;
 }
