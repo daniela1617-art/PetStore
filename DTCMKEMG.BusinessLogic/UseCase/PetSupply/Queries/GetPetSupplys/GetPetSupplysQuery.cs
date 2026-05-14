@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using DTCMKEMG.BusinessLogic.DTOs;
+using MediatR;
 
-namespace DTCMKEMG.BusinessLogic.UseCase.PetSupply.Queries.GetPetSupplys
+namespace DTCMKEMG.BusinessLogic.UseCase.PetSupply.Queries.GetPetSupplies
 {
-    internal class GetPetSupplysQuery
-    {
-    }
+    public record GetPetSuppliesQuery()
+        : IRequest<List<PetSupplyResponse>>;
 }

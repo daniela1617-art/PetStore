@@ -1,10 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using DTCMKEMG.BusinessLogic.DTOs;
+using MediatR;
 
 namespace DTCMKEMG.BusinessLogic.UseCase.PetSupply.Commands.UpdatePetSupply
 {
-    internal class UpdatePetSupplyCommand
-    {
-    }
+    public record UpdatePetSupplyCommand(
+        UpdatePetSupplyRequest Request)
+        : IRequest<int>;
 }
