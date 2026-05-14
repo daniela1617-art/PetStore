@@ -1,0 +1,61 @@
+﻿@model DTCMKEMG.BusinessLogic.DTOs.PetSupplyResponse
+
+@{
+    ViewData["Title"] = "Eliminar Pet Supply";
+}
+
+<h1>Eliminar Pet Supply</h1>
+
+<h4>¿Deseas eliminar este registro?</h4>
+
+<hr />
+
+<dl class="row">
+
+    <dt class="col-sm-2">
+        Pet Brand Id
+    </dt>
+
+    <dd class="col-sm-10">
+        @Model.PetBrandId
+    </dd>
+
+    <dt class="col-sm-2">
+        Nombre
+    </dt>
+
+    <dd class="col-sm-10">
+        @Model.ItemName
+    </dd>
+
+    <dt class="col-sm-2">
+        Precio
+    </dt>
+
+    <dd class="col-sm-10">
+        @Model.CustomerPrice
+    </dd>
+
+    <dt class="col-sm-2">
+        Stock
+    </dt>
+
+    <dd class="col-sm-10">
+        @Model.CurrentStock
+    </dd>
+
+</dl>
+
+<form asp-action="Delete">
+
+    <input type="hidden" asp-for="Id" />
+
+    <button type="submit" class="btn btn-danger">
+        Eliminar
+    </button>
+
+    <a asp-action="Index" class="btn btn-secondary">
+        Volver
+    </a>
+
+</form>

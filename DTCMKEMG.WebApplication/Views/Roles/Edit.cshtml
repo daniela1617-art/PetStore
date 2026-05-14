@@ -1,0 +1,22 @@
+﻿@model DTCMKEMG.BusinessLogic.DTOs.UpdateRoleRequest
+
+@{
+    ViewData["Title"] = "Editar";
+}
+
+<h1>Editar Rol</h1>
+
+<form asp-action="Edit">
+    
+    <input type="hidden" asp-for="Id" />
+
+    <div class="form-group">
+        <label asp-for="Name" class="control-label"></label>
+        <input asp-for="Name" class="form-control" />
+    </div>
+
+    <br />
+
+    <button type="submit" class="btn btn-primary">Guardar</button>
+    <a asp-action="Index" class="btn btn-secondary">Volver</a>
+</form>

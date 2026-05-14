@@ -1,0 +1,54 @@
+﻿@model IEnumerable<DTCMKEMG.BusinessLogic.DTOs.PetSupplyResponse>
+
+@{
+    ViewData["Title"] = "Pet Supplies";
+}
+
+<h1>Pet Supplies</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">
+        Crear Pet Supply
+    </a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Pet Brand Id</th>
+            <th>Nombre</th>
+            <th>Precio</th>
+            <th>Stock</th>
+            <th></th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.PetBrandId</td>
+
+                <td>@item.ItemName</td>
+
+                <td>@item.CustomerPrice</td>
+
+                <td>@item.CurrentStock</td>
+
+                <td>
+                    <a asp-action="Edit"
+                           asp-route-id="@item.Id"
+                           class="btn btn-success">
+                        Editar
+                    </a>
+
+                    <a asp-action="Delete"
+                           asp-route-id="@item.Id"
+                           class="btn btn-danger">
+                        Eliminar
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

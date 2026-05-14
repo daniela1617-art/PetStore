@@ -1,0 +1,19 @@
+﻿@model DTCMKEMG.BusinessLogic.DTOs.CreateRoleRequest
+
+@{
+    ViewData["Title"] = "Crear";
+}
+
+<h1>Crear Rol</h1>
+
+<form asp-action="Create">
+    <div class="form-group">
+        <label asp-for="Name" class="control-label"></label>
+        <input asp-for="Name" class="form-control" />
+    </div>
+
+    <br />
+
+    <button type="submit" class="btn btn-primary">Guardar</button>
+    <a asp-action="Index" class="btn btn-secondary">Volver</a>
+</form>

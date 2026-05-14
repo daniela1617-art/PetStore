@@ -15,6 +15,7 @@
 
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+
             <div class="container-fluid">
 
                 <a class="navbar-brand"
@@ -57,8 +58,6 @@
                             </a>
                         </li>
 
-                        <!-- NUEVO MENU USERS -->
-
                         <li class="nav-item">
                             <a class="nav-link text-dark"
                                    asp-area=""
@@ -68,10 +67,30 @@
                             </a>
                         </li>
 
+                        <li class="nav-item">
+                            <a class="nav-link text-dark"
+                                   asp-area=""
+                                   asp-controller="PetSupply"
+                                   asp-action="Index">
+                                PetSupply
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link text-dark"
+                                   asp-area=""
+                                   asp-controller="Roles"
+                                   asp-action="Index">
+                                Roles
+                            </a>
+                        </li>
+
                     </ul>
 
                 </div>
+
             </div>
+
         </nav>
     </header>
 
@@ -82,14 +101,17 @@
     </div>
 
     <footer class="border-top footer text-muted">
+
         <div class="container">
             &copy; 2026 - DTCMKEMG.WebApplication -
+
             <a asp-area=""
                    asp-controller="Home"
                    asp-action="Privacy">
                 Privacy
             </a>
         </div>
+
     </footer>
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

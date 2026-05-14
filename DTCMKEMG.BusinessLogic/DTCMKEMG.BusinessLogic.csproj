@@ -18,13 +18,5 @@
     <ProjectReference Include="..\DTCMKEMG.Entities\DTCMKEMG.Entities.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="UseCase\Role\Commands\CreateRole\" />
-    <Folder Include="UseCase\Role\Commands\DeleteRole\" />
-    <Folder Include="UseCase\Role\Commands\UpdateRole\" />
-    <Folder Include="UseCase\Role\Queries\GetRole\" />
-    <Folder Include="UseCase\Role\Queries\GetRoles\" />
-  </ItemGroup>
-
 
 	  </Project>

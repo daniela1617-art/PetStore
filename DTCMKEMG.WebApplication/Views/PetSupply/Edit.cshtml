@@ -1,0 +1,61 @@
+﻿@model DTCMKEMG.BusinessLogic.DTOs.UpdatePetSupplyRequest
+
+@{
+    ViewData["Title"] = "Editar Pet Supply";
+}
+
+<h1>Editar Pet Supply</h1>
+
+<form asp-action="Edit">
+
+    <input type="hidden" asp-for="Id" />
+
+    <div class="mb-3">
+        <label class="form-label">Pet Brand Id</label>
+
+        <input asp-for="PetBrandId"
+               class="form-control" />
+
+        <span asp-validation-for="PetBrandId"
+              class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Nombre</label>
+
+        <input asp-for="ItemName"
+               class="form-control" />
+
+        <span asp-validation-for="ItemName"
+              class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Precio</label>
+
+        <input asp-for="CustomerPrice"
+               class="form-control" />
+
+        <span asp-validation-for="CustomerPrice"
+              class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Stock</label>
+
+        <input asp-for="CurrentStock"
+               class="form-control" />
+
+        <span asp-validation-for="CurrentStock"
+              class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-success">
+        Actualizar
+    </button>
+
+    <a asp-action="Index" class="btn btn-secondary">
+        Volver
+    </a>
+
+</form>
