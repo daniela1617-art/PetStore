@@ -24,11 +24,6 @@
     <Folder Include="UseCase\Role\Commands\UpdateRole\" />
     <Folder Include="UseCase\Role\Queries\GetRole\" />
     <Folder Include="UseCase\Role\Queries\GetRoles\" />
-    <Folder Include="UseCase\User\Commands\CreateUser\" />
-    <Folder Include="UseCase\User\Commands\Delete\" />
-    <Folder Include="UseCase\User\Commands\Update\" />
-    <Folder Include="UseCase\User\Queries\GetUser\" />
-    <Folder Include="UseCase\User\Queries\GetUsers\" />
   </ItemGroup>
 
 
