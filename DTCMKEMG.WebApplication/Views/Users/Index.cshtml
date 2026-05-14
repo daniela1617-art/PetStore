@@ -1,0 +1,40 @@
+﻿@model IEnumerable<DTCMKEMG.BusinessLogic.DTOs.UserResponse>
+
+@{
+    ViewData["Title"] = "Usuarios";
+}
+
+<h1>Usuarios</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-info">
+        Ir a crear usuario
+    </a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nombre de usuario</th>
+            <th>Rol</th>
+            <th></th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Username</td>
+                <td>@item.RoleName</td>
+                <td>
+                    <a asp-action="Edit"
+                           asp-route-id="@item.Id"
+                           class="btn btn-success">
+                        Editar
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

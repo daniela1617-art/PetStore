@@ -2,10 +2,7 @@
 using Mapster;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
 using System.Reflection;
-using System.Text;
 
 namespace DTCMKEMG.BusinessLogic
 {
@@ -17,11 +14,14 @@ namespace DTCMKEMG.BusinessLogic
         {
             services.AddMediatR(
                 cfg =>
-                cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly())
+                cfg.RegisterServicesFromAssembly(
+                    Assembly.GetExecutingAssembly())
             );
+
             services.AddDataAccessServices(configuration);
 
-            TypeAdapterConfig.GlobalSettings.Scan(Assembly.GetExecutingAssembly());
+            TypeAdapterConfig.GlobalSettings.Scan(
+                Assembly.GetExecutingAssembly());
 
             return services;
         }
